@@ -30,7 +30,7 @@ hue_channel = image_hsv[:, :, 0]
 value_channel = image_hsv[:, :, 2]  # This is the brightness (value) channel
 
 # Adjust hue so that south-west corresponds to green (0.75)
-adjusted_hue_channel_correct = (hue_channel + 0.75) % 1  # Shift to make green (hue=0.75) correspond to South-West.
+adjusted_hue_channel_correct = (hue_channel + 0.52) % 1  # Shift to make green (hue=0.75) correspond to South-West.
 
 # Recalculate directions with the corrected hue values
 adjusted_directions_correct = np.angle(np.exp(1j * 2 * np.pi * adjusted_hue_channel_correct), deg=True)
