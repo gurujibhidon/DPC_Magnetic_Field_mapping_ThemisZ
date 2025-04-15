@@ -29,7 +29,7 @@ image_hsv = rgb_to_hsv(image_array_normalized)
 hue_channel = image_hsv[:, :, 0]
 value_channel = image_hsv[:, :, 2]  # This is the brightness (value) channel
 
-# Adjust hue so that south-west corresponds to green (0.75)
+# Adjust hue so that north-west corresponds to green (0.52)
 adjusted_hue_channel_correct = (hue_channel + 0.52) % 1  # Shift to make green (hue=0.75) correspond to South-West.
 
 # Recalculate directions with the corrected hue values
